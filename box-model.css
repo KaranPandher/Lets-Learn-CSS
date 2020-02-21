@@ -20,3 +20,13 @@
     border-bottom: 64px solid green;
     border-left: 64px solid blue;
 }
+
+body {
+    background-image: url(../lets-learn-css/img/ruin-540835_960_720.jpg);
+    /* Uploads background picture */
+    background-size: cover; /* Cover the whole element */
+    background-repeat: no-repeat;
+    /* Wont loop or repeat */
+    background-position: center; /* Can also be co ordinates like 50px 75px */
+    background-attachment: fixed;
+}

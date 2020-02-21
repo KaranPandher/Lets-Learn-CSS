@@ -1,3 +1,23 @@
+*{ /* Code reads bottom to top. This makes all the margins 
+    and padding for ALL browser defaults 0 and 0. Critical 
+    for funcationality with all browser default types */
+    /* Basic browser reset. */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../lets-learn-css/img/background-3909536_960_720.jpg);
+    /* Uploads background picture */
+    background-size: cover; /* Cover the whole element */
+    background-repeat: no-repeat;
+    /* Wont loop or repeat */
+    background-position: center; /* Can also be co ordinates like 50px 75px */
+    background-attachment: fixed;
+}
+
 article{
     width: 600px;
     margin-left: auto; /*Margin left and right as auto will center
@@ -36,10 +56,12 @@ article{
     z-index: 100000; /* Above WP toolbar. */
   }
 
-h1{
+h1, h2 {
     font-family: sans-serif;
+    font-size: 46px;
     text-align: center; /* Centers your text */
     color: green;
+    padding-top: 50px;
 }
 
 h2{
@@ -54,11 +76,15 @@ nav{
     max-width: 500px;
     background-color: salmon;
     margin: 16px auto;      /* margin auto for the navi */
+    position: relative;
+    top: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 nav ul {
     text-align: center; 
     padding: 0;
+    display: inline; /*Horizontal navigation instead of vertical  */
 }
 
 nav ul li {
@@ -66,14 +92,41 @@ nav ul li {
 }
 
 nav ul li a { 
-    text-decoration: none; /*Removes underline */
+    text-decoration: none; /*Disables the underline */
+    display: inline-block;
+    padding: 16px 32px; /* 16 px is top and bottom ; 32 is left and right */
+}
+
+nav ul li a:hover, nav u li a:focus, nav u li a:active { /* Hover adds big box highlighting over it when your mouse goes there */
+    /* Focus is when you press tab key this will show where you are. Hover for tab */
+    background-color: rgb(50, 50, 50);
+    color: #fff;
 }
 p{
     font-family: Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 1.5;
     color: rgb(33, 33, 33); /* There are a few ways to do color... */
-    background-color: #eeeeee;
+    background-color: #eeeeee; /* Background color of the paragraph */
+}
+
+#float-practice { /* For image added in paragraph */
+    float: left; 
+    margin-top: 0px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    margin-left: 0px;
+    /*margin: 0 16px 16px 0; */
+}
+
+#z-index-practice{
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 300px; 
+    right: 0px;
+    left: 0px; /* This centres the photo b/c RL 0 px */
+    z-index: -1; /* Visual layering! Think Photoshop... which element should appear :on-top"?! */
 }
 
 .hide-me { 
