@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap');
 
 @font-face { /* Downloads the font for the user, can be used now
     and everyone can see it viewing the page. Second src line is for all browsers compatability*/
@@ -208,4 +208,28 @@ p{
     left: 0;
     width: 32px;
     height: 32px;
+}
+#social-media-links {
+    list-style: none;
+    text-align: center; 
+}
+
+#social-media-links > li {
+    /* Direct childer selector ">" the LI must be DIRECTLY inside the element wit hthe "social-media-links" id in this case. */
+    display: inline-block;
+    padding: 15px;
+}
+
+#social-media-links .fab {
+    color: rgba( 50, 50, 50, 25); /* RGBA - the 'a' stands for ALPHA channel. */ 
+    /* For alpha = 1 opaque; 0 = transparent; */
+    font-size: 32px;
+    /* Changes the icons to any color you want in this case gray */
+}
+
+#social-media-links a:hover .fab,
+#social-meada-links a:focus .fab,
+#social-media-links a:active .fab { /* Pseudo-selector with nesting. */ 
+    color:rgba(50, 230, 240, 1);
+    /* Will hover with that color not */
 }
