@@ -8,6 +8,38 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Trade+Winds&display=swap')
+
+@font-face { /* Downloads the font for the user, can be used now
+    and everyone can see it viewing the page. Second src line is for all browsers compatability*/
+    font-family: 'JetBrains Mono';
+    src: url(../lets-learn-css/font/jetbrains-mono/JetBrainsMono-Regular.ttf);
+    src: url('../lets-learn-css/font/jetbrains-mono/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;   
+}
+
+@font-face { 
+    font-family: 'JetBrains Mono';
+    src: url(../lets-learn-css/font/jetbrains-mono/JetBrainsMono-Bold.ttf);
+    src: url('../lets-learn-css/font/jetbrains-mono/JetBrainsMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;   
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url(../lets-learn-css/font/jetbrains-mono/JetBrainsMono-Italic.ttf);
+    src: url('../lets-learn-css/font/jetbrains-mono/JetBrainsMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;   
+}
+
+code {
+    white-space: pre;
+    font-family: 'JetBrains Mono' Consolas, monospace;
+}
+
 body {
     background-image: url(../lets-learn-css/img/background-3909536_960_720.jpg);
     /* Uploads background picture */
@@ -57,15 +89,16 @@ article{
   }
 
 h1, h2 {
-    font-family: sans-serif;
+    font-family: 'JetBrains Mono', Consolas, moonspace; 
     font-size: 46px;
+    font-weight: bold;
     text-align: center; /* Centers your text */
     color: green;
     padding-top: 50px;
 }
 
 h2{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Trade Winds', 'Comic Sans', cursive;
     margin-left: auto; 
     margin-right: auto;
     color: blue;
@@ -146,4 +179,33 @@ p{
 .overflow-scroll {
     overflow: scroll;
     height: 35px;
+}
+
+#background-bullets, /* Combining 2 ids */
+#image-bullets{
+    list-style: none; /* gets rid of bullet points */
+    margin: 16px auto;
+    padding: 16px 16px 16px 64px; /*right side has more padding */
+}
+
+#background-bullets li { /* This puts it to a whole list with li to specific bullets*/
+    background-image: url(./img/phoenix-1995285_960_720.webp);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: top left;
+    padding: 8px 8px 8px 64px;
+}
+/*li adds the background image to everything on the list */
+
+#image-bullets li {
+    position: relative; /*Makes it relative to your list not whole webpage */
+    padding: 8px 8px 8px 64px;
+}
+
+#image-bullets li img{
+    position: absolute; /*Makes the image absolute to the list. Relative and absolute are used together injunctiion */
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
 }
