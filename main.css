@@ -57,7 +57,7 @@ article{
     margin-right: auto;
     padding: 16px; /* Spacing from top */
 }
-/* */
+/* Accessibility; needed for hiding words */
 .screen-reader-text {
     border: 0;
     clip: ClientRect(1px, 1px, 1px, 1px);
@@ -233,3 +233,24 @@ p{
     color:rgba(50, 230, 240, 1);
     /* Will hover with that color not */
 }
+
+@media screen and (min-width: 500px){
+    /* Always do min width becasue most people use there PHONES */
+    /* IMPORTANT to do for every code in beginning */
+        body{
+            background: green;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 28px;
+        }
+        p{
+            font-size: 15px;
+        }
+        
+    }
