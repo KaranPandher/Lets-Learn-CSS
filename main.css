@@ -273,9 +273,10 @@ p{
     /* Makes the bottom corner a sharper corner */
 }
 
-.speech-bubble::after {
+.speech-bubble::after { /* double colon is a pseudo element. This is a fake element.. keep in mind its contnet cannot be read by screen-readers or search engines --> ONLY use it for purely visual text with no importane/meaning */
     /* Double :: is pseudo element; creats fake element for styling purposes */
     content: '';
+    /* Start triangle --> below */
     display: block;
     width: 0;
     height: 0;
