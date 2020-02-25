@@ -237,9 +237,6 @@ p{
 @media screen and (min-width: 500px){
     /* Always do min width becasue most people use there PHONES */
     /* IMPORTANT to do for every code in beginning */
-        body{
-            background: green;
-        }
         h1 {
             font-size: 50px;
         }
@@ -254,3 +251,40 @@ p{
         }
         
     }
+
+.gradient-bg {
+        height: 300px;
+        opacity: 0.75;
+        margin-top: 50px;
+        /* Gradient generated at https://cssgradient.io */
+        background: rgb(34,193,195);
+        background: linear-gradient(254deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.23433874709976799) 49%);
+        box-shadow: 32px 32px 0 0 rgba(0,0,0,1);
+    }
+
+.speech-bubble {
+    background: rgba(255,255,255,0.95);
+    border-radius: 1.5em;
+    max-width: 300px; 
+    padding: 1.5em;
+    color: rgba(33,33,33,1);
+    margin-top: 75px; 
+    border-bottom-right-radius: 0; 
+    /* Makes the bottom corner a sharper corner */
+}
+
+.speech-bubble::after {
+    /* Double :: is pseudo element; creats fake element for styling purposes */
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    box-sizing: content-box; 
+    border-top: 0 solid transparent;
+    border-right: 32px solid rgba(255, 255, 255, 0.95);
+    border-bottom: 32px solid transparent; 
+    border-left: 0 solid transparent; 
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
